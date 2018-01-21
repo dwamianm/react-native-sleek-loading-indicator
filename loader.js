@@ -9,7 +9,7 @@ let {
 } = require('react-native');
 let styles = require('./styles');
 
-module.exports = React.createClass({
+module.exports = class extends React.Component {
    render() {
       return (
          <View style={styles.loadingContainer}>
@@ -24,4 +24,4 @@ module.exports = React.createClass({
          </View>
       );
    }
-});
+};

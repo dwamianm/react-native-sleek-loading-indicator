@@ -9,19 +9,16 @@ let {
 let styles = require('./styles');
 let LoadingIndicator = require('./loader');
 
-const SleekLoadingIndicator = React.createClass({
-
-  propTypes: {
+class SleekLoadingIndicator extends React.Component {
+  static propTypes = {
     text: React.PropTypes.string,
     loading: React.PropTypes.bool,
-  },
+  };
 
-  getDefaultProps() {
-    return {
-      text: 'Loading...',
-      loading: true
-    }
-  },
+  static defaultProps = {
+    text: 'Loading...',
+    loading: true
+  };
 
   render() {
     if (this.props.loading) {
@@ -34,6 +31,6 @@ const SleekLoadingIndicator = React.createClass({
       return null;
     }
   }
-});
+}
 
 module.exports = SleekLoadingIndicator;
