@@ -1,5 +1,7 @@
 'use strict';
 
+var PropTypes = require('prop-types');
+
 let React = require('react');
 let {
    View,
@@ -11,8 +13,8 @@ let LoadingIndicator = require('./loader');
 
 class SleekLoadingIndicator extends React.Component {
   static propTypes = {
-    text: React.PropTypes.string,
-    loading: React.PropTypes.bool,
+    text: PropTypes.string,
+    loading: PropTypes.bool,
   };
 
   static defaultProps = {
